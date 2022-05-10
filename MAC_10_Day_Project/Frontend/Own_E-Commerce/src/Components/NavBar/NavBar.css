@@ -20,15 +20,14 @@
   flex-direction: column;
   justify-content: end;
   width: 30%;
-  /* gap: 10%; */
 }
 .search-bar input {
-  font-size: 20px;
+  font-size: 16px;
   width: 60%;
-  height: 40%;
+  height: 4vh;
   vertical-align: middle;
-  /* margin-right: 1%; */
-  border-radius: 5%;
+  border-radius: 5px;
+  border-right: none;
 }
 .search-bar {
   /* border: 1px solid red; */
@@ -37,7 +36,6 @@
 }
 .search-bar button {
   font-size: 16px;
-  /* border-radius: 30%; */
 }
 .button,
 .button_text {

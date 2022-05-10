@@ -126,7 +126,7 @@ button {
 
 @media (max-width: 375px) {
   .category {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4, 22%);
     /* margin-bottom: 500px; */

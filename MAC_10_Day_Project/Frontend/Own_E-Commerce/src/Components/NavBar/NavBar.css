@@ -160,9 +160,13 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     height: 12vh;
+    /* align-items: center; */
+    padding-top: 2%;
   }
   .Navbar img {
-    width: 50%;
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 10vh;
     padding-left: 5%;
   }
   .Navbar .search-bar {
@@ -178,7 +182,7 @@
     display: none;
   }
   .button {
-    /* margin-top: -10px; */
+    margin-top: 5px;
     margin-left: 220%;
     padding-bottom: 13px;
     width: 100px;

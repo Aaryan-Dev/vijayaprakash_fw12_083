@@ -13,19 +13,19 @@ export const NavBar = () => {
       />
       <div className="search-bar">
         <input type="text" placeholder="Find Products..." />
-        <button class="button-84" role="button">
+        <button className="button-84" role="button">
           Search
         </button>
       </div>
       <div className="User-detail">
         <div className="button">
-          <button class="button-33" role="button">
+          <button className="button-33" role="button">
             <LocalMallRoundedIcon />
           </button>
-          <button class="button-33" role="button">
+          <button className="button-33" role="button">
             <FavoriteRoundedIcon />
           </button>
-          <button class="button-33" role="button">
+          <button className="button-33" role="button">
             <PersonRoundedIcon />
           </button>
           {/* <button>

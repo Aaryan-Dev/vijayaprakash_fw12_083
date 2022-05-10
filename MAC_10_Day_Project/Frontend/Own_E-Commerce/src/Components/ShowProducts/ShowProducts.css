@@ -23,3 +23,48 @@ button {
   font-size: 22px;
   margin-top: -0.5%;
 }
+
+/* Show products Styles */
+
+.Show_products {
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 90%;
+  display: grid;
+  margin: auto;
+  margin-top: 3%;
+  grid-template-columns: repeat(4, 22%);
+  justify-content: center;
+  grid-gap: 1%;
+  /* height: 605vh; */
+}
+.each_product {
+  border: 1px solid grey;
+}
+.each_product img {
+  width: 175px;
+  height: 200px;
+}
+.each_product .product_name {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  height: 4vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.filters_Sorts {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: auto;
+  margin-top: 1.5%;
+  display: flex;
+  justify-content: end;
+  gap: 2%;
+}
+.filters_Sorts button {
+  border: 1px solid grey;
+}

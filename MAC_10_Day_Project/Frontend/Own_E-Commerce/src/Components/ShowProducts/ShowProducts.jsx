@@ -86,7 +86,7 @@ export const ShowProducts = () => {
             src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
             alt=""
           />
-          <p style={{ fontSize: "16px" }}>Top Offers</p>
+          <p style={{ fontSize: "16px" }}>Offers</p>
         </button>
         <button onClick={() => handleSort("mobile")}>
           <img
@@ -145,6 +145,7 @@ export const ShowProducts = () => {
         <img src={slideshow_images[slide]} alt="" />
       </div> */}
 
+      <h2>All Products</h2>
       <div className="filters_Sorts ">
         <button onClick={() => handleSort("Rating")} className="button-84">
           Sort By Rating
@@ -162,7 +163,6 @@ export const ShowProducts = () => {
           Cost High to Low
         </button>
       </div>
-      <h2>All Products</h2>
 
       <div className="Show_products">
         {sort.map((e) => (

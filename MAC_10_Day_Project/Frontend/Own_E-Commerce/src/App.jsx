@@ -8,6 +8,7 @@ import { SignIn } from "./Components/SignIn/SignIn";
 function App() {
   return (
     <div className="App">
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<ShowProducts />} />
         <Route path="/signup" element={<Signup />} />

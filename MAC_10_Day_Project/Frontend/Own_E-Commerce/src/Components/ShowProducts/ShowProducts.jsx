@@ -5,6 +5,21 @@ import "./ShowProducts.css";
 export const ShowProducts = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState([]);
+  // let [slide, setSlide] = useState(0);
+
+  // const slideshow_images = [
+  //   "https://rukminim1.flixcart.com/flap/844/140/image/46bb69d96a7c9ece.jpg?q=50",
+  //   "https://rukminim1.flixcart.com/flap/50/50/image/dd3a6312580de0fb.png?q=50",
+  // ];
+
+  // let count = 0;
+  // setInterval(() => {
+  //   if (count == slideshow_images.length) {
+  //     setSlide(0);
+  //   }
+  //   count++;
+  //   setSlide(slide++);
+  // }, 5000);
 
   const display = () => {
     fetch(`http://localhost:8080/products`)
@@ -60,6 +75,12 @@ export const ShowProducts = () => {
       setSort(data);
       return;
     }
+  };
+
+  const handleRating = () => {
+    let temp = [...showdata];
+    temp.sort((a, b) => a.rating - b.rating);
+    showdata(temp);
   };
 
   return (
@@ -126,8 +147,12 @@ export const ShowProducts = () => {
       <br />
       <hr />
 
+      {/* <div className="slideshow">
+        <img src={slideshow_images[slide]} alt="" />
+      </div> */}
+
       <div className="filters_Sorts">
-        <button onClick={() => handleSort("Rating")}>Filter By Rating</button>
+        <button onClick={() => handleSort("Rating")}>Sort By Rating</button>
         <button onClick={() => handleSort("cost low to high")}>
           Cost Low to High
         </button>
@@ -135,6 +160,7 @@ export const ShowProducts = () => {
           Cost High to Low
         </button>
       </div>
+      <h2>All Products</h2>
 
       <div className="Show_products">
         {sort.map((e) => (

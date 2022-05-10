@@ -41,9 +41,10 @@ button {
 }
 .each_product {
   border: 1px solid grey;
+  cursor: pointer;
 }
 .each_product img {
-  width: 175px;
+  width: 125px;
   height: 200px;
 }
 .each_product .product_name {

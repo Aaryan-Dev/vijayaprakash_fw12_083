@@ -1,0 +1,25 @@
+.category {
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  padding-top: 1%;
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 3%;
+  height: 14vh;
+}
+button img {
+  /* border: 1px solid red; */
+  width: 70px;
+  height: 12vh;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+.category p {
+  font-size: 22px;
+  margin-top: -0.5%;
+}

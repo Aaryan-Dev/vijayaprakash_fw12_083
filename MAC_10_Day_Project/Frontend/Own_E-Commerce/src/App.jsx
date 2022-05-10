@@ -1,12 +1,14 @@
 import "./App.css";
 import { NavBar } from "./Components/NavBar/NavBar";
-// import ShopIcon from "@mui/icons-material/Shop";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { ShowProducts } from "./Components/ShowProducts/ShowProducts";
 
 function App() {
-  /* <ShopIcon /> */
   return (
     <div className="App">
-      <NavBar />
+      <Routes>
+        <Route path="/" element={<ShowProducts />} />
+      </Routes>
     </div>
   );
 }

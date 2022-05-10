@@ -77,12 +77,6 @@ export const ShowProducts = () => {
     }
   };
 
-  const handleRating = () => {
-    let temp = [...showdata];
-    temp.sort((a, b) => a.rating - b.rating);
-    showdata(temp);
-  };
-
   return (
     <div>
       <NavBar />
@@ -151,12 +145,20 @@ export const ShowProducts = () => {
         <img src={slideshow_images[slide]} alt="" />
       </div> */}
 
-      <div className="filters_Sorts">
-        <button onClick={() => handleSort("Rating")}>Sort By Rating</button>
-        <button onClick={() => handleSort("cost low to high")}>
+      <div className="filters_Sorts ">
+        <button onClick={() => handleSort("Rating")} className="button-84">
+          Sort By Rating
+        </button>
+        <button
+          onClick={() => handleSort("cost low to high")}
+          className="button-84"
+        >
           Cost Low to High
         </button>
-        <button onClick={() => handleSort("cost high to low")}>
+        <button
+          onClick={() => handleSort("cost high to low")}
+          className="button-84"
+        >
           Cost High to Low
         </button>
       </div>

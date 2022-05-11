@@ -55,8 +55,7 @@ export const Cart = () => {
     total = sum.toFixed(2);
   }
 
-  const handleQuantity = (value, { price }) => {
-    console.log("price", price);
+  const handleQuantity = (value) => {
     if (qty > 0) {
       setQty(qty + value);
     }
@@ -98,7 +97,7 @@ export const Cart = () => {
                         className="button-84"
                         style={{ width: "10px" }}
                         onClick={() => {
-                          handleQuantity(1, { price });
+                          handleQuantity(1);
                         }}
                       >
                         +

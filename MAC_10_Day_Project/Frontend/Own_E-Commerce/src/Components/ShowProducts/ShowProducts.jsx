@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavBar } from "../NavBar/NavBar";
 import { Link } from "react-router-dom";
-import StarPurple500Icon from "@mui/icons-material/StarPurple500";
+import StarIcon from "@mui/icons-material/Star";
 import "./ShowProducts.css";
 
 export const ShowProducts = () => {
@@ -10,18 +10,18 @@ export const ShowProducts = () => {
   // let [slide, setSlide] = useState(0);
 
   // const slideshow_images = [
-  //   "https://rukminim1.flixcart.com/flap/844/140/image/46bb69d96a7c9ece.jpg?q=50",
-  //   "https://rukminim1.flixcart.com/flap/50/50/image/dd3a6312580de0fb.png?q=50",
+  //   "https://rukminim1.flixcart.com/flap/1688/280/image/3b0c484a2a17b0b5.jpg?q=50",
+  //   "https://rukminim1.flixcart.com/flap/844/140/image/3b0c484a2a17b0b5.jpg?q=50",
   // ];
 
   // let count = 0;
   // setInterval(() => {
-  //   if (count == slideshow_images.length) {
-  //     setSlide(0);
-  //   }
-  //   count++;
-  //   setSlide(slide++);
-  // }, 5000);
+  // if (count == slideshow_images.length) {
+  //   setSlide(0);
+  // }
+  // count++;
+  // setSlide(slide++);
+  // }, 4000);
 
   const display = () => {
     fetch(`http://localhost:8080/products`)
@@ -186,7 +186,13 @@ export const ShowProducts = () => {
               <p className="product_rating">
                 <span className="star_text">{e.rating}</span>
                 <span className="star">
-                  <StarPurple500Icon />
+                  <StarIcon
+                    style={{
+                      paddingBottom: "0px",
+                      fontSize: "14px",
+                      marginLeft: "2px",
+                    }}
+                  />
                 </span>
               </p>
             </div>

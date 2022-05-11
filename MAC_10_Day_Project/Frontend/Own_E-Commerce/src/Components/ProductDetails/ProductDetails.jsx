@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { NavBar } from "../NavBar/NavBar";
 import "./ProductDetails.css";
+import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 
 export const ProductDetails = () => {
   const [data, setData] = useState([]);
@@ -42,6 +43,23 @@ export const ProductDetails = () => {
             <span style={{ color: "blueviolet" }}>Rating : </span>
             {data.rating}
           </p>
+          <div className="two_buttons">
+            <button class="button-33 Add_to_cart_btn" role="button">
+              Add to Bag
+            </button>
+            <button
+              class="button-33 Add_to_wishlist_btn"
+              role="button"
+              style={{ paddingBottom: "10px" }}
+            >
+              WishList{" "}
+              <span>
+                <FavoriteRoundedIcon
+                  style={{ paddingBottom: "0px", fontSize: "15px" }}
+                />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

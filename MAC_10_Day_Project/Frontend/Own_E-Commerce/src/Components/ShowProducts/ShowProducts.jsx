@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavBar } from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
+import StarPurple500Icon from "@mui/icons-material/StarPurple500";
 import "./ShowProducts.css";
 
 export const ShowProducts = () => {
@@ -145,7 +147,7 @@ export const ShowProducts = () => {
         <img src={slideshow_images[slide]} alt="" />
       </div> */}
 
-      <h2>All Products</h2>
+      <h2 style={{ color: "#6c6caf" }}>Popular Collections</h2>
       <div className="filters_Sorts ">
         <button onClick={() => handleSort("Rating")} className="button-84">
           Sort By Rating
@@ -166,12 +168,29 @@ export const ShowProducts = () => {
 
       <div className="Show_products">
         {sort.map((e) => (
-          <div key={e.id} className="each_product" title={e.title}>
-            <img src={e.image} alt="" />
-            <p className="product_name">{e.title}</p>
-            <p className="product_price">$ {e.price}</p>
-            <p className="product_rating">Rating : {e.rating}</p>
-          </div>
+          <Link
+            to={`/selected_product_details/${e.id}`}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div key={e.id} className="each_product" title={e.title}>
+              <img src={e.image} alt={e.title} />
+              <p className="product_name">{e.title}</p>
+              <p className="product_price">
+                <span
+                  style={{ color: "red", fontSize: "16px", fontWeight: "500" }}
+                >
+                  Price ${" "}
+                </span>
+                {e.price}
+              </p>
+              <p className="product_rating">
+                <span className="star_text">{e.rating}</span>
+                <span className="star">
+                  <StarPurple500Icon />
+                </span>
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

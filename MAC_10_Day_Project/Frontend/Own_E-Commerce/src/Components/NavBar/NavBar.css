@@ -13,7 +13,8 @@
 .Navbar img {
   /* border: 1px solid red; */
   border-radius: 70%;
-  height: 75%;
+  width: 25%;
+  /* height: 50%; */
 }
 .User-detail {
   /* border: 1px solid red; */
@@ -162,12 +163,15 @@
     height: 12vh;
     /* align-items: center; */
     padding-top: 2%;
+    /* position: fixed; */
   }
   .Navbar img {
     /* border: 1px solid red; */
     width: 40%;
-    height: 10vh;
-    padding-left: 5%;
+    height: 9.5vh;
+    /* position: relative; */
+    padding-left: -15%;
+    margin-left: -75px;
   }
   .Navbar .search-bar {
     margin-left: -70px;

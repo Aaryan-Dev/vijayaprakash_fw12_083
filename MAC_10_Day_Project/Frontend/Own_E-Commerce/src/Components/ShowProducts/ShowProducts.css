@@ -28,12 +28,13 @@ button {
 
 .Show_products {
   border-top: 1px solid grey;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
+  /* border-left: 1px solid grey;
+  border-right: 1px solid grey; */
   width: 90%;
   display: grid;
   margin: auto;
   margin-top: 3%;
+  padding-top: 1%;
   grid-template-columns: repeat(4, 22%);
   justify-content: center;
   grid-gap: 1%;
@@ -42,6 +43,7 @@ button {
 .each_product {
   border: 1px solid grey;
   cursor: pointer;
+  /* text-decoration: none; */
 }
 .each_product img {
   width: 125px;
@@ -56,6 +58,7 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: steelblue;
 }
 .filters_Sorts {
   /* border: 1px solid red; */
@@ -69,6 +72,23 @@ button {
 .filters_Sorts button {
   /* border-radius: 10px; */
   border: 1px solid grey;
+}
+
+.product_rating {
+  /* border: 2px solid red; */
+  background-color: green;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 5%;
+  height: 4.5vh;
+  color: white;
+}
+.star_text {
+  font-size: 16px;
+  /* border: 1px solid red; */
+}
+.star {
+  font-size: 16px;
 }
 
 .button-84 {

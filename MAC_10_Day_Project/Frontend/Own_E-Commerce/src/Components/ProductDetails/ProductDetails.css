@@ -1,0 +1,24 @@
+.each_product_detail {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 30% 65%;
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  grid-gap: 1%;
+}
+.each_product_detail img {
+  width: 100%;
+  padding-left: 1%;
+  cursor: pointer;
+}
+.prod_des {
+  /* border: 1px solid red; */
+  width: 55%;
+  margin: auto;
+}
+.each_product_detail_text {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: auto;
+}

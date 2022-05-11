@@ -3,15 +3,19 @@ import "./NavBar.css";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import LocalMallRoundedIcon from "@mui/icons-material/LocalMallRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <div>
       <div className="Navbar">
-        <img
-          src="https://i.pinimg.com/600x315/1e/29/77/1e2977ca1225981e307ad8d2c26a9040.jpg"
-          alt="Logo"
-        />
+        <Link to={"/"}>
+          <img
+            className="logo_img"
+            src="https://i.pinimg.com/600x315/1e/29/77/1e2977ca1225981e307ad8d2c26a9040.jpg"
+            alt="Logo"
+          />
+        </Link>
         <div className="search-bar">
           <input type="text" placeholder="Find Products..." />
           <button className="button-84" role="button">

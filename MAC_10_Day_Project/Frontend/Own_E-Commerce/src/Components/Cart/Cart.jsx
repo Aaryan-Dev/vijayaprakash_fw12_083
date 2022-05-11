@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavBar } from "../NavBar/NavBar";
 import "./Cart.css";
-import StarPurple500Icon from "@mui/icons-material/StarPurple500";
+import StarIcon from "@mui/icons-material/Star";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
@@ -87,7 +87,13 @@ export const Cart = () => {
                   <p className="cart-item-rating">
                     {e.rating}
                     <span className="rating_text">
-                      <StarPurple500Icon />
+                      <StarIcon
+                        style={{
+                          paddingBottom: "0px",
+                          fontSize: "14px",
+                          marginLeft: "2px",
+                        }}
+                      />
                     </span>
                   </p>
                   <p className="display_quantity">Quantity : {qty}</p>

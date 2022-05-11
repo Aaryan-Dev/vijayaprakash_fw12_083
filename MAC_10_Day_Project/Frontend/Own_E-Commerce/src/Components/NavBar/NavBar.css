@@ -45,6 +45,14 @@
   flex-direction: row;
   width: 100%;
 }
+.button {
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  display: flex;
+}
+.button .button-33 {
+  margin-left: 60px;
+}
 .button > button:nth-child(1),
 .button > button:nth-child(2),
 .button > button:nth-child(3) {

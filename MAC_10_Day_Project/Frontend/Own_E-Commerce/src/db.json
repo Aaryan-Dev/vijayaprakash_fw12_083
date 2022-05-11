@@ -360,5 +360,26 @@
       "category": "camera",
       "rating": 3.6
     }
+  ],
+
+  "cartItems": [
+    {
+      "category": "men's clothing",
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "id": 1,
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "price": 109.95,
+      "rating": 3.9,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+    },
+    {
+      "id": 40,
+      "title": "NIKON D780 DSLR Camera Body with 24-120 mm",
+      "price": 2500.99,
+      "image": "https://rukminim2.flixcart.com/image/312/312/k9oj8280/dslr-camera/p/c/e/d780-d780-nikon-original-imafrexfxntwzhnz.jpeg?q=70",
+      "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+      "category": "camera",
+      "rating": 3.6
+    }
   ]
 }

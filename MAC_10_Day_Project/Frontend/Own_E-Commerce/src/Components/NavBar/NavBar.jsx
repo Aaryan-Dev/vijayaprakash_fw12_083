@@ -24,15 +24,21 @@ export const NavBar = () => {
         </div>
         <div className="User-detail">
           <div className="button">
-            <button className="button-33" role="button">
-              <LocalMallRoundedIcon />
-            </button>
-            <button className="button-33" role="button">
-              <FavoriteRoundedIcon />
-            </button>
-            <button className="button-33" role="button">
-              <PersonRoundedIcon />
-            </button>
+            <Link to={"/cart"}>
+              <button className="button-33" role="button">
+                <LocalMallRoundedIcon />
+              </button>
+            </Link>
+            <Link to={"#"}>
+              <button className="button-33" role="button">
+                <FavoriteRoundedIcon />
+              </button>
+            </Link>
+            <Link to={"#"}>
+              <button className="button-33" role="button">
+                <PersonRoundedIcon />
+              </button>
+            </Link>
           </div>
           <div className="button_text">
             <p>Cart</p>

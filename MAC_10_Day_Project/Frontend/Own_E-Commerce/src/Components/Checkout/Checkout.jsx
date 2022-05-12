@@ -47,28 +47,28 @@ export const Checkout = () => {
           <div className="address_first_box">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Name*"
               value={address.Name}
               name="Name"
               onChange={(e) => handleChange(e)}
             />
             <input
               type="text"
-              placeholder="10-Digit Mobile Number"
+              placeholder="10-Digit Mobile Number*"
               value={address.Mobile}
               name="Mobile"
               onChange={(e) => handleChange(e)}
             />
             <input
               type="text"
-              placeholder="Pincode"
+              placeholder="Pincode*"
               value={address.Pincode}
               name="Pincode"
               onChange={(e) => handleChange(e)}
             />
             <input
               type="text"
-              placeholder="Locality"
+              placeholder="Locality*"
               value={address.Locality}
               name="Locality"
               onChange={(e) => handleChange(e)}
@@ -77,7 +77,7 @@ export const Checkout = () => {
           <div className="address_second_box">
             <input
               type="text"
-              placeholder="Address (Area and Street)"
+              placeholder="Address (Area and Street)*"
               value={address.Full_address}
               name="Full_address"
               onChange={(e) => handleChange(e)}
@@ -86,14 +86,14 @@ export const Checkout = () => {
           <div className="address_third_box">
             <input
               type="text"
-              placeholder="City"
+              placeholder="City*"
               value={address.City}
               name="City"
               onChange={(e) => handleChange(e)}
             />
             <input
               type="text"
-              placeholder="State"
+              placeholder="State*"
               value={address.State}
               name="State"
               onChange={(e) => handleChange(e)}

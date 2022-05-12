@@ -100,7 +100,7 @@ export const Checkout = () => {
             />
             <input
               type="text"
-              placeholder="Landmark"
+              placeholder="Landmark (Optional)"
               value={address.Landmark}
               name="Landmark"
               onChange={(e) => handleChange(e)}

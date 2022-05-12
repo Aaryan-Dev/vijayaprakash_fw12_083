@@ -438,7 +438,7 @@
       "price": 249.49,
       "image": "https://rukminim2.flixcart.com/image/612/612/kfvfwy80-0/shirt/q/a/z/40-alsfcucuf648513-allen-solly-original-imafw8m8jwzepvbd.jpeg?q=70",
       "category": "fashion",
-      "rating": 4.0,
+      "rating": 4,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days."
     },
     {
@@ -456,7 +456,7 @@
       "price": 249.49,
       "image": "https://rukminim2.flixcart.com/image/612/612/ksc46fk0/t-shirt/t/y/p/xs-wmb-girls-shoppie-original-imag5xe3sdhgg8sg.jpeg?q=70",
       "category": "fashion",
-      "rating": 4.0,
+      "rating": 4,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days."
     },
     {
@@ -636,7 +636,7 @@
       "price": 249.49,
       "image": "https://rukminim2.flixcart.com/image/612/612/ktuewsw0/sunglass/f/q/n/daimond-cut-medium-singco-india-original-imag73fzzknhtnkq.jpeg?q=70",
       "category": "others",
-      "rating": 4.0,
+      "rating": 4,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days."
     },
     {
@@ -757,25 +757,53 @@
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days."
     }
   ],
-
   "cartItems": [
     {
-      "category": "men's clothing",
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "id": 1,
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
       "price": 109.95,
-      "rating": 3.9,
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": 3.9
     },
     {
-      "id": 40,
-      "title": "NIKON D780 DSLR Camera Body with 24-120 mm",
-      "price": 2500.99,
-      "image": "https://rukminim2.flixcart.com/image/312/312/k9oj8280/dslr-camera/p/c/e/d780-d780-nikon-original-imafrexfxntwzhnz.jpeg?q=70",
+      "id": 14,
+      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      "price": 999.99,
+      "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+      "rating": 2.2
+    }
+  ],
+  "favourites": [
+    {
+      "id": 1,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": 3.9
+    },
+    {
+      "id": 6,
+      "title": "Solid Gold Petite Micropave ",
+      "price": 168,
+      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      "rating": 3.9
+    },
+    {
+      "id": 10,
+      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      "price": 109,
       "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-      "category": "camera",
-      "rating": 3.6
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "rating": 2.9
     }
   ]
 }

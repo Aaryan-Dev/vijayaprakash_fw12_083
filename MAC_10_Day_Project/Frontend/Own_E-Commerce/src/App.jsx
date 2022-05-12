@@ -6,6 +6,7 @@ import { Signup } from "./Components/SignUp/Signup";
 import { SignIn } from "./Components/SignIn/SignIn";
 import { ProductDetails } from "./Components/ProductDetails/ProductDetails";
 import { Cart } from "./Components/Cart/Cart";
+import { Checkout } from "./Components/Checkout/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           path="/selected_product_details/:id"
           element={<ProductDetails />}
         />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );

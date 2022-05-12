@@ -9,7 +9,7 @@ export const ProductDetails = () => {
   const [data, setData] = useState([]);
 
   const id = useParams();
-  console.log("id:", id);
+  // console.log("id:", id);
 
   const display = () => {
     fetch(`http://localhost:8080/products/${id.id}`)
@@ -22,6 +22,38 @@ export const ProductDetails = () => {
     display();
   }, []);
 
+  const cart_product = { ...data };
+
+  const addToCart = (query) => {
+    // console.log("cart_product:", cart_product);
+
+    if (query == "addtocart") {
+      fetch(`http://localhost:8080/cartItems`, {
+        method: "POST",
+        body: JSON.stringify(cart_product),
+        headers: { "Content-Type": "Application/json" },
+      })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+      alert("Yay! Product added to Cart");
+    } else {
+      fetch(`http://localhost:8080/favourites`, {
+        method: "POST",
+        body: JSON.stringify(cart_product),
+        headers: { "Content-Type": "Application/json" },
+      })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+      alert("Yay! Product added to Favourites");
+    }
+
+    // console.log("Product added");
+  };
+
   return (
     <div>
       <NavBar />
@@ -31,26 +63,39 @@ export const ProductDetails = () => {
         </div>
         <div className="each_product_detail_text">
           <p>{data.title}</p>
-          <p className="prod_des">
-            <h3 style={{ color: "blueviolet" }}>Product Description :</h3>
+          <div className="prod_des">
+            <p
+              style={{
+                color: "blueviolet",
+                fontWeight: "700",
+                fontSize: "18px",
+              }}
+            >
+              Product Description :
+            </p>
             {data.description}
-          </p>
-          <h3>
+          </div>
+          <p style={{ fontWeight: "700" }}>
             <span style={{ color: "red" }}> Price $ </span>
             {data.price}
-          </h3>
+          </p>
           <p>
             <span style={{ color: "blueviolet" }}>Rating : </span>
             {data.rating}
           </p>
           <div className="two_buttons">
-            <button class="button-33 Add_to_cart_btn" role="button">
+            <button
+              className="button-33 Add_to_cart_btn"
+              role="button"
+              onClick={() => addToCart("addtocart")}
+            >
               Add to Bag
             </button>
             <button
-              class="button-33 Add_to_wishlist_btn"
+              className="button-33 Add_to_wishlist_btn"
               role="button"
               style={{ paddingBottom: "10px" }}
+              onClick={() => addToCart("addtowishlist")}
             >
               WishList{" "}
               <span>

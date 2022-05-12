@@ -55,6 +55,7 @@ input {
   /* border: 1px solid red; */
   width: 60%;
   height: 6vh;
+  margin-left: 5%;
   background-color: rgb(160, 200, 223);
   border-radius: 25px;
 }

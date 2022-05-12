@@ -1,0 +1,156 @@
+.address_form {
+  border: 1px solid grey;
+  margin: auto;
+  margin-top: 13vh;
+  width: 50%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+.address_first_box,
+.address_third_box {
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  /* margin: auto; */
+  padding-left: 1%;
+  gap: 2%;
+  width: 98%;
+  justify-content: center;
+  /* place-items: center; */
+}
+input {
+  height: 5vh;
+  margin-top: 1%;
+  border: 0.5px solid grey;
+  font-size: 16px;
+}
+.address_second_box {
+  margin: 1.5% 0;
+  /* border: 1px solid red; */
+}
+.address_second_box input {
+  height: 15vh;
+  width: 70%;
+}
+.show_address {
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 1%;
+  width: 51%;
+  margin-bottom: 5%;
+}
+.show_address_textarea {
+  border: 1px solid grey;
+  width: 80%;
+  height: 14vh;
+  text-align: left;
+  margin-bottom: 1%;
+}
+.show_address_textarea p {
+  margin-top: 0.5%;
+  padding-left: 1%;
+  width: 80%;
+}
+.fill_form {
+  /* border: 1px solid red; */
+  width: 60%;
+  height: 6vh;
+  background-color: rgb(160, 200, 223);
+  border-radius: 25px;
+}
+
+/* CSS */
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3eb2fd;
+  background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd, sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, background-position 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
+}
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0a66c2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus {
+  background-color: #16437e;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.button-18:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}

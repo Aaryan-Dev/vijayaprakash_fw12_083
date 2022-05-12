@@ -9,35 +9,12 @@ export const Cart = () => {
   const [qty, setQty] = useState(1);
   const [subtotal, setSubtotal] = useState(0);
 
-  //   const data = [
-  //     {
-  //       category: "men's clothing",
-  //       description:
-  //         "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-  //       id: 1,
-  //       image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-  //       price: 109.95,
-  //       rating: 3.9,
-  //       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-  //     },
-  //     {
-  //       category: "men's clothing",
-  //       description:
-  //         "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-  //       id: 1,
-  //       image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-  //       price: 109.95,
-  //       rating: 3.9,
-  //       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-  //     },
-  //   ];
-
   const cartdisplay = () => {
     fetch(`http://localhost:8080/cartItems`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
-        console.log(res);
+        // console.log(res);
       })
       .catch((err) => console.log(err));
   };
@@ -46,14 +23,25 @@ export const Cart = () => {
     cartdisplay();
   }, []);
 
+  //-------------------------------------------------
+
+  // To find the Total Items in Cart
   let itemslength;
   itemslength = data.length;
-  let total;
+  // ***Finished*** To find the ***Total Items*** in Cart
+  //--------------------------------------------------
 
+  // To find the ***Total Price*** of the cart items
+  let total;
   if (data.length > 0) {
-    let sum = data.reduce((a, b) => a.price + b.price);
+    let sum = 0;
+    data.forEach((e) => {
+      sum += e.price;
+    });
     total = sum.toFixed(2);
   }
+  // ***Finished*** To find the ***Total Price*** of the cart items
+  //--------------------------------------
 
   const handleQuantity = (value) => {
     if (qty > 0) {
@@ -79,7 +67,9 @@ export const Cart = () => {
                   <img src={e.image} alt={e.title} />
                 </div>
                 <div className="cart-item-details">
-                  <p className="cart-item-title">{e.title}</p>
+                  <p className="cart-item-title" title={e.title}>
+                    {e.title}
+                  </p>
                   <p className="cart-item-category"> In {e.category} Section</p>
                   <p className="stocks_left">Hurry! Only Few Stocks Left!</p>
                   <p className="cart-item-des">{e.description}</p>
@@ -156,7 +146,7 @@ export const Cart = () => {
               <span style={{ fontWeight: "500" }}> $ : {total}</span>
             </h3>
             {/* <button className="buy_button">Proceed to Buy</button> */}
-            <Link to={""}>
+            <Link to={"/checkout"}>
               <button className="button-37" role="button">
                 Proceed to Buy
               </button>

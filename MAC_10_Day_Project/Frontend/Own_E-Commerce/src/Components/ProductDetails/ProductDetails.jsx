@@ -9,7 +9,6 @@ export const ProductDetails = () => {
   const [data, setData] = useState([]);
 
   const id = useParams();
-  // console.log("id:", id);
 
   const display = () => {
     fetch(`http://localhost:8080/products/${id.id}`)
@@ -50,8 +49,6 @@ export const ProductDetails = () => {
 
       alert("Yay! Product added to Favourites");
     }
-
-    // console.log("Product added");
   };
 
   return (

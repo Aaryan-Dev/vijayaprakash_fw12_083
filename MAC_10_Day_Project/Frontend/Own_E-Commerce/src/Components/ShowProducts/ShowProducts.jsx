@@ -147,7 +147,19 @@ export const ShowProducts = () => {
         <img src={slideshow_images[slide]} alt="" />
       </div> */}
 
-      <h2 style={{ color: "#6c6caf" }}>Popular Collections</h2>
+      <h2
+        style={{
+          color: "black",
+          // border: "1px solid red",
+          height: "7vh",
+          marginTop: "-1.5vh",
+          backgroundColor: "#b7c7e4",
+          textAlign: "center",
+          paddingTop: "1vh",
+        }}
+      >
+        Popular Collections
+      </h2>
       <div className="filters_Sorts ">
         <button onClick={() => handleSort("Rating")} className="button-84">
           Sort By Rating

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Payment.css";
 
 export const Payment = () => {
@@ -18,13 +19,13 @@ export const Payment = () => {
   return (
     <div className="entire_container">
       <div>
-        <a href="./index.html">
+        <Link to={"/"}>
           <img
             src="https://i.pinimg.com/600x315/1e/29/77/1e2977ca1225981e307ad8d2c26a9040.jpg"
             alt=""
             className="logo_img"
           />
-        </a>
+        </Link>
       </div>
       <hr />
       <div>

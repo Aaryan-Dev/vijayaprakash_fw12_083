@@ -117,9 +117,9 @@ export const Payment = () => {
               />
             </form>
 
-            <a href="./payment_confirmation.html">
+            <Link to={"/orderConfirmation"}>
               <button id="pay">PAY NOW</button>
-            </a>
+            </Link>
             <button id="cancel">CANCEL</button>
           </div>
         </div>

@@ -24,7 +24,7 @@ export const ShowProducts = () => {
   // }, 4000);
 
   const display = () => {
-    fetch(`http://localhost:8080/products`)
+    fetch(`http://localhost:8081/products`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
@@ -181,10 +181,10 @@ export const ShowProducts = () => {
       <div className="Show_products">
         {sort.map((e) => (
           <Link
-            to={`/selected_product_details/${e.id}`}
+            to={`/selected_product_details/${e._id}`}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <div key={e.id} className="each_product" title={e.title}>
+            <div key={e._id} className="each_product" title={e.title}>
               <img src={e.image} alt={e.title} />
               <p className="product_name">{e.title}</p>
               <p className="product_price">

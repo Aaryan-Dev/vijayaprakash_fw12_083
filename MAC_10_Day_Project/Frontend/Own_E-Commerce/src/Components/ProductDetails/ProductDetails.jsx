@@ -11,7 +11,7 @@ export const ProductDetails = () => {
   const id = useParams();
 
   const display = () => {
-    fetch(`http://localhost:8080/products/${id.id}`)
+    fetch(`http://localhost:8081/products/${id.id}`)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));

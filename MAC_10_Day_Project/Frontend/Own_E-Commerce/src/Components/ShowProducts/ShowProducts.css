@@ -78,7 +78,7 @@ button {
 
 .product_rating {
   /* border: 2px solid red; */
-  background-color: green;
+  background-color: rgb(38, 114, 38);
   width: 18%;
   align-items: center;
   padding-left: 6%;
@@ -91,18 +91,33 @@ button {
 }
 .star_text {
   font-size: 16px;
-  /* border: 1px solid red; */
+  color: white;
 }
 .star {
   font-size: 16px;
+  color: white;
 }
-
-.slideshow img {
+.slideshow {
   /* border: 1px solid red; */
-  width: 95%;
-  /* height: 20vh; */
+  width: 100%;
+  margin: auto;
+  height: 50vh;
+  overflow: hidden;
+  margin-top: -1%;
+  margin-bottom: 1%;
 }
-
+.slideshow img {
+  width: 100%;
+}
+.slideshow div {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 10%;
+  grid-gap: 80%;
+}
 .button-84 {
   align-items: center;
   background-color: initial;

@@ -2,26 +2,28 @@ import React, { useEffect, useState } from "react";
 import { NavBar } from "../NavBar/NavBar";
 import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import "./ShowProducts.css";
 
 export const ShowProducts = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState([]);
-  // let [slide, setSlide] = useState(0);
+  let [slide, setSlide] = useState(0);
 
-  // const slideshow_images = [
-  //   "https://rukminim1.flixcart.com/flap/1688/280/image/3b0c484a2a17b0b5.jpg?q=50",
-  //   "https://rukminim1.flixcart.com/flap/844/140/image/3b0c484a2a17b0b5.jpg?q=50",
-  // ];
+  const slideshow_images = [
+    "https://m.media-amazon.com/images/I/81mlHpf2x3L._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61OJMuYUzBL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61oNpFmniyL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61SOcflSoPL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61cVtPiiXsL._SX3000_.jpg",
+    "https://m.media-amazon.com/images/I/61k6hqpuqKL._SX3000_.jpg",
+  ];
 
-  // let count = 0;
-  // setInterval(() => {
-  // if (count == slideshow_images.length) {
-  //   setSlide(0);
-  // }
-  // count++;
-  // setSlide(slide++);
-  // }, 4000);
+  const handleSlideshow = () => {
+    if (slide == slideshow_images.length - 1) return setSlide(0);
+    setSlide((slide += 1));
+  };
 
   const display = () => {
     fetch(`http://localhost:8081/products`)
@@ -36,8 +38,6 @@ export const ShowProducts = () => {
   useEffect(() => {
     display();
   }, []);
-
-  // console.log("sort:", sort);
 
   const handleSort = (query) => {
     if (query == "mobile") {
@@ -143,9 +143,17 @@ export const ShowProducts = () => {
       <br />
       <hr />
 
-      {/* <div className="slideshow">
+      <div className="slideshow">
         <img src={slideshow_images[slide]} alt="" />
-      </div> */}
+        <div>
+          <button onClick={handleSlideshow}>
+            <KeyboardArrowLeftIcon />
+          </button>
+          <button onClick={handleSlideshow}>
+            <KeyboardArrowRightIcon />
+          </button>
+        </div>
+      </div>
 
       <h2
         style={{
@@ -200,9 +208,12 @@ export const ShowProducts = () => {
                 <span className="star">
                   <StarIcon
                     style={{
+                      // border: "1px solid red",
                       paddingBottom: "0px",
                       fontSize: "14px",
                       marginLeft: "2px",
+                      // backgroundColor: "black",
+                      color: "white",
                     }}
                   />
                 </span>

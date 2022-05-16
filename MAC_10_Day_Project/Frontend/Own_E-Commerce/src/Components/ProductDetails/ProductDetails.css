@@ -9,8 +9,17 @@
   margin-top: 14vh;
   position: relative;
 }
-.each_product_detail img {
+.each_product_detail div:nth-child(1) {
+  /* border: 1px solid red; */
   width: 100%;
+  margin-left: -5%;
+  height: 70vh;
+  display: grid;
+  place-items: center;
+}
+.each_product_detail img {
+  width: 95%;
+  height: 70vh;
   padding-left: 1%;
   cursor: pointer;
 }
@@ -19,8 +28,7 @@
   width: 55%;
   margin: auto;
 }
-.prod_des 
-.each_product_detail_text {
+.prod_des .each_product_detail_text {
   /* border: 1px solid red; */
   width: 80%;
   margin: auto;

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import "./ShowProducts.css";
+import "./Home.css";
 
-export const ShowProducts = () => {
+export const Home = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState([]);
   let [slide, setSlide] = useState(0);
@@ -48,18 +48,18 @@ export const ShowProducts = () => {
     "https://m.media-amazon.com/images/I/61k6hqpuqKL._SX3000_.jpg",
   ];
 
-  setInterval(() => {
-    if (img == slide_img.length - 1) return setImg(0);
-    setImg((img += 1));
-  }, 2000);
+  // setInterval(() => {
+  //   if (img == slide_img.length - 1) return setImg(0);
+  //   setImg((img += 1));
+  // }, 2000);
 
-  // useEffect(() => {
-  //   setTimeout(
-  //     () => setImg((prev) => (prev === slide_img.length - 1 ? 0 : prev + 1)),
-  //     3000,
-  //   );
-  //   // return () => {};
-  // }, [img]);
+  useEffect(() => {
+    setTimeout(
+      () => setImg((prev) => (prev === slide_img.length - 1 ? 0 : prev + 1)),
+      4000,
+    );
+    // return () => {};
+  }, [img]);
 
   const handleSlideshow = () => {
     if (slide == slideshow_images.length - 1) return setSlide(0);
@@ -265,11 +265,11 @@ export const ShowProducts = () => {
       </div>
       <div
         style={{
-          display: "none",
+          // display: "none",
           // width: "80%",
-          border: "1px solid red",
-          paddingTop: "250vh",
-          // marginTop: "250vh",
+          // border: "1px solid red",
+          // paddingTop: "250vh",
+          marginTop: "235vh",
           marginBottom: "50vh",
           margin: "auto",
           height: "50vh",

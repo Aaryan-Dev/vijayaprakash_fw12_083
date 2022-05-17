@@ -276,14 +276,17 @@ export const Home = () => {
           overflow: "hidden",
         }}
       >
-        <img
-          src={slide_img[img]}
-          alt=""
-          style={{
-            width: "100%",
-            // transform: `translate3d(${-img * 100}%, 0, 0)`,
-          }}
-        />
+        <Link to={"#"}>
+          <img
+            src={slide_img[img]}
+            alt=""
+            style={{
+              width: "100%",
+              cursor: "pointer",
+              // transform: `translate3d(${-img * 100}%, 0, 0)`,
+            }}
+          />
+        </Link>
       </div>
     </div>
   );

@@ -210,7 +210,11 @@ export const Home = () => {
         Popular Collections
       </h2>
       <div className="filters_Sorts ">
-        <button onClick={() => handleSort("Rating")} className="button-84">
+        <button
+          onClick={() => handleSort("Rating")}
+          className="button-84"
+          style={{ height: "5vh" }}
+        >
           Sort By Rating
         </button>
         <button
@@ -269,7 +273,7 @@ export const Home = () => {
           // width: "80%",
           // border: "1px solid red",
           // paddingTop: "250vh",
-          marginTop: "235vh",
+          marginTop: "250vh",
           marginBottom: "50vh",
           margin: "auto",
           height: "50vh",

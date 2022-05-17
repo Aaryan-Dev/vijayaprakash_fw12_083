@@ -1,56 +1,81 @@
-.create_account_btn {
-  border: 1px solid red;
+#sign_up {
+  border: 1px lightslategrey grey;
+  margin: auto;
+  width: 33%;
+  margin-top: 13vh;
 }
-/* CSS */
-.button-84 {
-  align-items: center;
-  background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
-  border-radius: 8px;
-  border-width: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
+#logo_img {
+  padding: 1% 27%;
+}
+#create_account {
+  /* border: 1px solid red; */
+  display: flex;
   flex-direction: column;
-  font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 16px;
-  height: 30px;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  overflow: hidden;
-  padding: 0 32px;
-  text-align: center;
+  /* text-align: center; */
+  margin: 2% 12%;
+}
+form input {
+  width: 95%;
+  height: 6vh;
+}
+a {
+  color: #4d82b8;
   text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all 150ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
-
-.button-84:hover {
-  box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
-  opacity: 0.85;
+.agree {
+  width: 95%;
+  /* border: 1px solid black; */
+  margin-top: 2.5%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-left: 1%;
 }
-
-.button-84:active {
-  outline: 0;
+.agree input {
+  margin-left: 5%;
 }
-
-.button-84:focus {
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+.agree .common_text {
+  /* border: 1px solid red; */
+  margin-top: 1.75%;
 }
-
-@media (max-width: 420px) {
-  .button-84 {
-    height: 48px;
-  }
+#create_button {
+  /* border: 1px solid red; */
+  width: 96%;
+  height: 6vh;
+  background-color: steelblue;
+  border-radius: 15px;
+  color: white;
+  margin-top: 5%;
+  text-align: center;
+  padding: 2.5% 0%;
+  font-size: 16px;
+  cursor: pointer;
 }
+.common_text {
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+.grey {
+  color: #777777;
+  margin-top: 1%;
+}
+.already {
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+#create_account > h2 {
+  text-align: center;
+  font-weight: normal;
+}
+.already span:hover {
+  text-decoration: underline;
+}
+#create_account input {
+  border-radius: 5px;
+  height: 5vh;
+}
+/* input {
+  border: transparent;
+  outline: none;
+} */

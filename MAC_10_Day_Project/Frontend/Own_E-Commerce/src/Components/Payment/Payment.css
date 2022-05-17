@@ -1,10 +1,11 @@
-* {
+/* * {
   color: black;
-}
+} */
 .entire_container {
   width: 40%;
   margin: auto;
   /* border: 1px solid red; */
+  margin-top: -10.1vh;
 }
 #bill_details {
   /* border: 1px solid red; */

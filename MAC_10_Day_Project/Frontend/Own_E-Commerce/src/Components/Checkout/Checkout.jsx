@@ -24,15 +24,28 @@ export const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (
+      !address.Name ||
+      !address.Full_address ||
+      !address.City ||
+      !address.Mobile ||
+      !address.State ||
+      !address.Pincode
+    )
+      return alert("Please Enter the all Required Details");
     setDisplayAddress(
-      address.Full_address +
+      address.Name +
+        ",  #" +
+        address.Full_address +
         ", " +
         address.City +
-        ", " +
-        address.State +
         " - " +
         address.Pincode +
-        " Phone Number: " +
+        ", " +
+        address.State +
+        ", " +
+        "Phone Number: " +
         address.Mobile +
         ".",
     );
@@ -68,7 +81,7 @@ export const Checkout = () => {
             />
             <input
               type="text"
-              placeholder="Locality*"
+              placeholder="Locality"
               value={address.Locality}
               name="Locality"
               onChange={(e) => handleChange(e)}

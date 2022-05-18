@@ -9,8 +9,11 @@ import { useSelector } from "react-redux";
 export const ProductDetails = () => {
   const [data, setData] = useState([]);
   const id = useParams();
-  const Logged_userid = useSelector((state) => state.userId);
-  console.log("Logged_userid:", Logged_userid);
+  // const Logged_userid = useSelector((state) => state.userId);
+  // console.log("Logged_userid:", Logged_userid);
+
+  const userID = localStorage.getItem("UserID");
+  console.log("userID:", userID);
 
   const display = () => {
     fetch(`http://localhost:8081/products/${id.id}`)

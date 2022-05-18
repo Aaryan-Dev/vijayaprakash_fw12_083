@@ -18,7 +18,7 @@ export const loginFailure = () => ({
 export const login =
   ({ email, password }) =>
   (dispatch) => {
-    console.log(email, password);
+    // console.log(email, password);
     dispatch(loginLoading());
     fetch(`http://localhost:8081/login`, {
       method: "POST",
@@ -30,6 +30,8 @@ export const login =
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
+        localStorage.setItem("UserID", JSON.stringify(res._id));
+
         dispatch(
           loginSuccess({
             email: res.email,
@@ -39,3 +41,7 @@ export const login =
       })
       .catch((err) => dispatch(loginFailure()));
   };
+
+// function clearData() {
+//   localStorage.clear();
+// }

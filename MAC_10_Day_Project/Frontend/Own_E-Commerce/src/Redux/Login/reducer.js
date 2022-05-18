@@ -14,10 +14,11 @@ export const loginReducer = (store = initState, { type, payload }) => {
     case LOGIN_LOADING:
       return { ...store, loading: true };
     case LOGIN_SUCCESS:
+      console.log("Payload", payload);
       return {
         ...store,
         loading: false,
-        userid: payload.cartItems,
+        userid: payload.userid,
         isAuthenticated: true,
         // username: payload.username,
         // token: payload.token,

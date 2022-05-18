@@ -20,7 +20,10 @@ export const SignIn = () => {
   // console.log(userdetails);
 
   const handleSubmit = () => {
-    dispatch(login(userdetails));
+    // dispatch(login(userdetails));
+    ///////////////////////////////////////////////////
+    // Write fetch to update products to cart
+    ///////////////////////////////////////////////////
   };
 
   return (

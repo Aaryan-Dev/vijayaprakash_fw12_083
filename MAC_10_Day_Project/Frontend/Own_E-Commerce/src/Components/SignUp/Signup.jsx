@@ -78,31 +78,31 @@ export const Signup = () => {
           </form>
           <div className="agree">
             <input type="checkbox" />
-            <p class="common_text">
+            <p className="common_text">
               I agree to the <span style={{ color: "red" }}>Shopp.my</span>{" "}
               <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy.</a>
             </p>
           </div>
           <div className="agree" style={{ display: "none" }}>
             <input type="checkbox" />
-            <p class="common_text">
+            <p className="common_text">
               Yes, Sign up our newsletter, get Rs.150 coupons in your first
               email! You will receive our latest updates, news, and promotions
               from
-              <span style={{ color: "red" }}>Shopp.my</span>.
+              <span style={{ color: "red" }}>Shopp.my</span>
             </p>
           </div>
           <div>
             <button id="create_button" onClick={handleSubmit}>
               Create My Account
             </button>
-            <p class="common_text grey">
+            <p className="common_text grey">
               Register at <span style={{ color: "red" }}>Shopp.my</span> and
               receive 10 points.
             </p>
           </div>
           <div>
-            <p class="common_text already">
+            <p className="common_text already">
               Already Have An Account ?{" "}
               <span>
                 <Link to={"/signin"}>Sign In</Link>

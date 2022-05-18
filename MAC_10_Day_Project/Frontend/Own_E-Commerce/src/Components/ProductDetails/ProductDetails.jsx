@@ -5,13 +5,12 @@ import { NavBar } from "../NavBar/NavBar";
 import "./ProductDetails.css";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import { useSelector } from "react-redux";
-import {} from "../../Redux/Login/action";
 
 export const ProductDetails = () => {
   const [data, setData] = useState([]);
   const id = useParams();
-  // const { userid } = useSelector((state) => state.userId);
-  // console.log("userid:", userid);
+  const Logged_userid = useSelector((state) => state.userId);
+  console.log("Logged_userid:", Logged_userid);
 
   const display = () => {
     fetch(`http://localhost:8081/products/${id.id}`)
@@ -57,7 +56,7 @@ export const ProductDetails = () => {
   return (
     <div>
       <NavBar />
-      <div className="each_product_detail">
+      <div className="each_product_detail" key={data.id}>
         <div>
           <img src={data.image} alt={data.title} />
         </div>

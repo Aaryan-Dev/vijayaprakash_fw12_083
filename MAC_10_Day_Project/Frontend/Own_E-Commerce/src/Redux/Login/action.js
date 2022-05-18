@@ -1,7 +1,6 @@
 export const LOGIN_LOADING = "LOGIN_LOADING";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
-export const USER_ID = "USER_ID";
 
 export const loginLoading = () => ({
   type: LOGIN_LOADING,
@@ -16,7 +15,27 @@ export const loginFailure = () => ({
   type: LOGIN_FAILURE,
 });
 
-export const userId = (payload) => ({
-  type: USER_ID,
-  payload,
-});
+export const login =
+  ({ email, password }) =>
+  (dispatch) => {
+    console.log(email, password);
+    dispatch(loginLoading());
+    fetch(`http://localhost:8081/login`, {
+      method: "POST",
+      body: JSON.stringify({ email, password }), // => De-Structuring the userDetails by {username , password} SAME in "19th Line"
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        dispatch(
+          loginSuccess({
+            email: res.email,
+            userid: res._id,
+          }),
+        );
+      })
+      .catch((err) => dispatch(loginFailure()));
+  };

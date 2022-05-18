@@ -3,8 +3,8 @@ import { Footer } from "../Footer/Footer";
 import { NavBar } from "../NavBar/NavBar";
 import "./Signin.css";
 import { useDispatch, useSelector } from "react-redux";
-import { userId } from "../../Redux/Login/action";
-import { Navigate } from "react-router-dom";
+// import { userId } from "../../Redux/Login/action";
+import { login } from "../../Redux/Login/action";
 
 export const SignIn = () => {
   const [userdetails, setUserdetails] = useState({
@@ -20,19 +20,7 @@ export const SignIn = () => {
   // console.log(userdetails);
 
   const handleSubmit = () => {
-    fetch(`http://localhost:8081/login`, {
-      method: "POST",
-      body: JSON.stringify(userdetails),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log("res._id", res._id);
-        // dispatch(userId({ userid: res._id }));
-      })
-      .catch((err) => console.log(err));
+    dispatch(login(userdetails));
   };
 
   return (

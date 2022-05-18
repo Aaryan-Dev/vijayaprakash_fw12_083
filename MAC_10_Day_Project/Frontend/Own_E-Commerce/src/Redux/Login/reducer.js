@@ -1,4 +1,4 @@
-import { LOGIN_LOADING, LOGIN_SUCCESS, LOGIN_FAILURE, USER_ID } from "./action";
+import { LOGIN_LOADING, LOGIN_SUCCESS, LOGIN_FAILURE } from "./action";
 
 const initState = {
   username: "",
@@ -17,15 +17,12 @@ export const loginReducer = (store = initState, { type, payload }) => {
       return {
         ...store,
         loading: false,
-        userid: payload.userid,
+        userid: payload.cartItems,
         isAuthenticated: true,
-        username: payload.username,
-        token: payload.token,
+        // username: payload.username,
+        // token: payload.token,
         error: false,
       };
-    case USER_ID:
-      // console.log("payload", payload);
-      return { ...store, userid: payload.userid };
     case LOGIN_FAILURE:
       return {
         ...store,

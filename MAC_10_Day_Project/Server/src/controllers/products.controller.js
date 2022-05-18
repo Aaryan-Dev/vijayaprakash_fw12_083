@@ -2,7 +2,6 @@ const Products = require("../models/products.model");
 const express = require("express");
 
 const router = express.Router();
-console.log("4th line");
 
 router.post("", async (req, res) => {
   try {

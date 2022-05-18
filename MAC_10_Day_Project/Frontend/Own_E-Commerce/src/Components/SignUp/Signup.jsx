@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { NavBar } from "../NavBar/NavBar";
 import "./Signup.css";
 
 export const Signup = () => {
+  const [credential, setCredential] = useState({
+    email: "",
+    password: "",
+  });
+  // console.log("credential:", credential);
+
+  const handleChange = (e) => {
+    setCredential({ ...credential, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    fetch(`http://localhost:8081/register`, {
+      method: "POST",
+      body: JSON.stringify(credential),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       <div>
@@ -29,19 +52,29 @@ export const Signup = () => {
         <div id="create_account">
           <h3>Please enter the required details to create an Account</h3>
           <form action="">
-            <input type="email" placeholder="Email address" id="signup_email" />
+            <input
+              type="email"
+              placeholder="Email address"
+              id="signup_email"
+              name="email"
+              value={credential.email}
+              onChange={handleChange}
+            />
             <br />
             <br />
             <input
               type="password"
               placeholder="6-20 characters (letters or numbers only)"
               id="signup_password"
+              name="password"
+              value={credential.password}
+              onChange={handleChange}
             />
             <br />
             <br />
-            <input type="password" placeholder="Enter password again" />
+            {/* <input type="password" placeholder="Enter password again" />
             <br />
-            <br />
+            <br /> */}
           </form>
           <div className="agree">
             <input type="checkbox" />
@@ -60,7 +93,7 @@ export const Signup = () => {
             </p>
           </div>
           <div>
-            <button id="create_button" onclick="signup()">
+            <button id="create_button" onClick={handleSubmit}>
               Create My Account
             </button>
             <p class="common_text grey">

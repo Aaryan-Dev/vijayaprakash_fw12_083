@@ -6,8 +6,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const productsControllers = require("./controllers/products.controller");
+const productsController = require("./controllers/products.controller");
 
-app.use("/products", productsControllers);
+///////////////////////////////////
+
+// const productDetailsController = require("./controllers/productDetails.controller");
+// const cartController = require("./controllers/cart.controller");
+const signUp = require("./controllers/users.controller");
+const login = require("./controllers/login.controller");
+
+// app.use("/productDetail", productDetailsController);
+// app.use("/cart", cartController);
+app.use("/register", signUp);
+app.use("/login", login);
+
+///////////////////////////////////
+
+app.use("/products", productsController);
 
 module.exports = app;

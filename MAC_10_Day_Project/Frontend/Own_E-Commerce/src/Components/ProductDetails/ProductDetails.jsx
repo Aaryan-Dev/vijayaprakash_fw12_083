@@ -4,11 +4,14 @@ import { useParams } from "react-router-dom";
 import { NavBar } from "../NavBar/NavBar";
 import "./ProductDetails.css";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import { useSelector } from "react-redux";
+import {} from "../../Redux/Login/action";
 
 export const ProductDetails = () => {
   const [data, setData] = useState([]);
-
   const id = useParams();
+  // const { userid } = useSelector((state) => state.userId);
+  // console.log("userid:", userid);
 
   const display = () => {
     fetch(`http://localhost:8081/products/${id.id}`)
@@ -27,7 +30,7 @@ export const ProductDetails = () => {
     // console.log("cart_product:", cart_product);
 
     if (query == "addtocart") {
-      fetch(`http://localhost:8080/cartItems`, {
+      fetch(`http://localhost:8081/`, {
         method: "POST",
         body: JSON.stringify(cart_product),
         headers: { "Content-Type": "Application/json" },

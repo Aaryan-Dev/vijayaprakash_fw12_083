@@ -9,6 +9,7 @@ import "./Home.css";
 export const Home = () => {
   const [data, setData] = useState([]);
   const [sort, setSort] = useState([]);
+  // console.log("sort:", sort);
   let [slide, setSlide] = useState(0);
   let [img, setImg] = useState(0);
 

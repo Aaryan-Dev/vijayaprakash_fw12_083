@@ -34,7 +34,7 @@ export const NavBar = () => {
                 <FavoriteRoundedIcon />
               </button>
             </Link>
-            <Link to={"#"}>
+            <Link to={"/signin"}>
               <button className="button-33" role="button">
                 <PersonRoundedIcon />
               </button>

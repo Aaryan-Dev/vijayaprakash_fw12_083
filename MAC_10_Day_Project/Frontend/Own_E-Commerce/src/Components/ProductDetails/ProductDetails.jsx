@@ -50,7 +50,7 @@ export const ProductDetails = () => {
       fetch(
         `http://localhost:8081/register/updateFav/6283c78c7e03a6517f8866a5`,
         {
-          method: "POST",
+          method: "PATCH",
           body: JSON.stringify(cart_product),
           headers: { "Content-Type": "Application/json" },
         },

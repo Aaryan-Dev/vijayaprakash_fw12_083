@@ -75,4 +75,21 @@ router.patch("/updateCart/:userId", async (req, res) => {
   }
 });
 
+router.patch("/updateFav/:userId", async (req, res) => {
+  try {
+    let product = req.body;
+    console.log("from update", product);
+
+    let result = await User.findByIdAndUpdate(req.params.userId, {
+      $push: { wishList: product },
+    })
+      .lean()
+      .exec();
+
+    res.status(200).send(result);
+  } catch (e) {
+    return res.status(500).json({ message: e.message, status: "Failed" });
+  }
+});
+
 module.exports = router;

@@ -30,24 +30,31 @@ export const ProductDetails = () => {
 
   const addToCart = (query) => {
     // console.log("cart_product:", cart_product);
+    // http://localhost:8081/register/6283c78c7e03a6517f8866a5
 
     if (query == "addtocart") {
-      fetch(`http://localhost:8081/`, {
-        method: "POST",
-        body: JSON.stringify(cart_product),
-        headers: { "Content-Type": "Application/json" },
-      })
+      fetch(
+        `http://localhost:8081/register/updateCart/6283c78c7e03a6517f8866a5`,
+        {
+          method: "PATCH",
+          body: JSON.stringify(cart_product),
+          headers: { "Content-Type": "Application/json" },
+        },
+      )
         .then((res) => res.json())
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
 
       alert("Yay! Product added to Cart");
     } else {
-      fetch(`http://localhost:8080/favourites`, {
-        method: "POST",
-        body: JSON.stringify(cart_product),
-        headers: { "Content-Type": "Application/json" },
-      })
+      fetch(
+        `http://localhost:8081/register/updateFav/6283c78c7e03a6517f8866a5`,
+        {
+          method: "POST",
+          body: JSON.stringify(cart_product),
+          headers: { "Content-Type": "Application/json" },
+        },
+      )
         .then((res) => res.json())
         .then((res) => console.log(res))
         .catch((err) => console.log(err));

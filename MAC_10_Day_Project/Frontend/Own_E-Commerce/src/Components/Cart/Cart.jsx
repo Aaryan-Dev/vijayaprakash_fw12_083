@@ -6,15 +6,18 @@ import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const [data, setData] = useState([]);
+  console.log("data:", data);
   const [qty, setQty] = useState(1);
   const [subtotal, setSubtotal] = useState(0);
+  let LoggedUserId = localStorage.getItem("UserID");
+  console.log("LoggedUserId:", LoggedUserId);
 
   const cartdisplay = () => {
-    fetch(`http://localhost:8080/cartItems`)
+    fetch(`http://localhost:8081/register/6283c78c7e03a6517f8866a5`)
       .then((res) => res.json())
       .then((res) => {
-        setData(res);
-        // console.log(res);
+        console.log(res.cartItems);
+        setData(res.cartItems);
       })
       .catch((err) => console.log(err));
   };

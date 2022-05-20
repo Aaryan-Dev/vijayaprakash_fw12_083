@@ -55,12 +55,8 @@ export const Cart = () => {
     setSubtotal(total);
     console.log("subtotal:", subtotal);
   };
-  // handleSum();
   // ***Finished*** To find the ***Total Price*** of the cart items
   //-------------------------------------------------
-
-  // if (value == "add") data[0].quantity += 1;
-  //     else data[0].quantity -= 1;
 
   const handleQuantity = (value, item_id) => {
     // console.log("e:", item_id);

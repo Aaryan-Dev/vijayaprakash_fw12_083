@@ -9,6 +9,7 @@ import { Checkout } from "./Components/Checkout/Checkout";
 import { Payment } from "./Components/Payment/Payment";
 import { OrderConfirmation } from "./Components/OrderConfirmation/OrderConfirmation";
 import { Home } from "./Components/Home/Home";
+import { Favourites } from "./Components/Favourites/Favourites";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/favourites" element={<Favourites />} />
         <Route
           path="/selected_product_details/:id"
           element={<ProductDetails />}

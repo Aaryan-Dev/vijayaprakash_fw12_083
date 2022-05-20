@@ -171,6 +171,14 @@ button {
   }
 }
 
+.auto-slide {
+  /* border: 1px solid red; */
+  top: 170%;
+  height: 65vh;
+  overflow: hidden;
+  position: absolute;
+}
+
 @media (max-width: 375px) {
   .category {
     /* border: 1px solid red; */

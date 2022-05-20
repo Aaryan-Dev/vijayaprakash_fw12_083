@@ -281,17 +281,19 @@ export const Home = () => {
           overflow: "hidden",
         }}
       >
-        <Link to={"#"}>
-          <img
-            src={slide_img[img]}
-            alt=""
-            style={{
-              width: "100%",
-              cursor: "pointer",
-              // transform: `translate3d(${-img * 100}%, 0, 0)`,
-            }}
-          />
-        </Link>
+        <div class="auto-slide">
+          <Link to={"#"}>
+            <img
+              src={slide_img[img]}
+              alt=""
+              style={{
+                width: "100%",
+                cursor: "pointer",
+                // transform: `translate3d(${-img * 100}%, 0, 0)`,
+              }}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

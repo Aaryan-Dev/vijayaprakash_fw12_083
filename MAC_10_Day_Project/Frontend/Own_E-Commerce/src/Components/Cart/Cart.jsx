@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const [data, setData] = useState([]);
-  console.log("data:", data);
+  // console.log("data:", data);
   const [qty, setQty] = useState(1);
   const [subtotal, setSubtotal] = useState(0);
+  // console.log("subtotalstart:", subtotal);
+
   let LoggedUserId = localStorage.getItem("UserID");
-  console.log("LoggedUserId:", LoggedUserId);
+  // console.log("LoggedUserId:", LoggedUserId);
 
   const cartdisplay = () => {
     fetch(`http://localhost:8081/register/6283c78c7e03a6517f8866a5`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.cartItems);
+        // console.log(res.cartItems);
         setData(res.cartItems);
       })
       .catch((err) => console.log(err));
@@ -27,29 +29,51 @@ export const Cart = () => {
   }, []);
 
   //-------------------------------------------------
-
   // To find the Total Items in Cart
   let itemslength;
   itemslength = data.length;
   // ***Finished*** To find the ***Total Items*** in Cart
-  //--------------------------------------------------
-
-  // To find the ***Total Price*** of the cart items
+  //-------------------------------------------------
   let total;
-  if (data.length > 0) {
+  let sum = 0;
+  data.forEach((e) => {
+    sum += e.quantity * e.price;
+  });
+  total = sum.toFixed(2);
+  // setSubtotal(total);
+
+  //-------------------------------------------------
+  // To find the ***Total Price*** of the cart items
+
+  const handleSum = () => {
     let sum = 0;
     data.forEach((e) => {
-      sum += e.price;
+      sum += e.quantity * e.price;
     });
     total = sum.toFixed(2);
-  }
+    console.log("total:", total);
+    setSubtotal(total);
+    console.log("subtotal:", subtotal);
+  };
+  // handleSum();
   // ***Finished*** To find the ***Total Price*** of the cart items
-  //--------------------------------------
+  //-------------------------------------------------
 
-  const handleQuantity = (value) => {
-    if (qty > 0) {
-      setQty(qty + value);
-    }
+  // if (value == "add") data[0].quantity += 1;
+  //     else data[0].quantity -= 1;
+
+  const handleQuantity = (value, item_id) => {
+    // console.log("e:", item_id);
+    let temp;
+    temp = data.filter((e, i) => {
+      // console.log(e._id, i);
+      if (item_id == e._id) {
+        // console.log("e == e._id:", item_id == e._id);
+        if (value == "add") setQty((e.quantity += 1));
+        else if (value == "sub") setQty((e.quantity -= 1));
+      }
+    });
+    handleSum();
   };
 
   return (
@@ -89,14 +113,14 @@ export const Cart = () => {
                       />
                     </span>
                   </p>
-                  <p className="display_quantity">Quantity : {qty}</p>
+                  <p className="display_quantity">Quantity : {e.quantity}</p>
                   <div className="Quanity-btn">
                     <div className="qty_btn">
                       <button
                         className="button-84"
                         style={{ width: "10px" }}
                         onClick={() => {
-                          handleQuantity(1);
+                          handleQuantity("add", e._id);
                         }}
                       >
                         +
@@ -105,7 +129,7 @@ export const Cart = () => {
                       <button
                         className="button-84"
                         onClick={() => {
-                          handleQuantity(-1);
+                          handleQuantity("sub", e._id);
                         }}
                       >
                         -
@@ -120,7 +144,7 @@ export const Cart = () => {
                   <h3 className="cart-item-price">
                     {" "}
                     <span style={{ fontWeight: "500" }}> $ </span>
-                    {e.price}
+                    {e.quantity * e.price}
                   </h3>
                 </div>
               </div>
@@ -130,7 +154,10 @@ export const Cart = () => {
           <div className="subtotal">
             <h3>
               Subtotal ({itemslength} Items)
-              <span style={{ fontWeight: "500" }}> $ : {total}</span>
+              <span style={{ fontWeight: "500" }}>
+                {" "}
+                $ : {total > subtotal ? total : subtotal}
+              </span>
             </h3>
           </div>
         </div>
@@ -146,9 +173,11 @@ export const Cart = () => {
           <div className="final_total">
             <h3>
               Subtotal ({itemslength} Items)
-              <span style={{ fontWeight: "500" }}> $ : {total}</span>
+              <span style={{ fontWeight: "500" }}>
+                {" "}
+                $ : {total > subtotal ? total : subtotal}
+              </span>
             </h3>
-            {/* <button className="buy_button">Proceed to Buy</button> */}
             <Link to={"/checkout"}>
               <button className="button-37" role="button">
                 Proceed to Buy

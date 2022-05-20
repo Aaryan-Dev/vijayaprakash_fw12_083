@@ -28,6 +28,7 @@ export const ProductDetails = () => {
 
   const cart_product = { ...data };
 
+  console.log("cart_product:", cart_product);
   const addToCart = (query) => {
     // console.log("cart_product:", cart_product);
     // http://localhost:8081/register/6283c78c7e03a6517f8866a5

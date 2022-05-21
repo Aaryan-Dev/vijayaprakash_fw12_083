@@ -51,9 +51,9 @@ export const Cart = () => {
       sum += e.quantity * e.price;
     });
     total = sum.toFixed(2);
-    console.log("total:", total);
+    // console.log("total:", total);
     setSubtotal(total);
-    console.log("subtotal:", subtotal);
+    // console.log("subtotal:", subtotal);
   };
   // ***Finished*** To find the ***Total Price*** of the cart items
   //-------------------------------------------------

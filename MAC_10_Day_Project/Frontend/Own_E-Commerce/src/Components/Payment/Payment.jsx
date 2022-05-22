@@ -18,6 +18,17 @@ export const Payment = () => {
   };
   // console.log("paymentDetails:", paymentDetails);
 
+  const handleClearCart = () => {
+    fetch(`http://localhost:8081/register/purchased/6283c78c7e03a6517f8866a5`, {
+      method: "PATCH",
+      body: JSON.stringify([]),
+      headers: { "Content-Type": "Application/json" },
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       <div>
@@ -128,7 +139,9 @@ export const Payment = () => {
               </form>
 
               <Link to={"/orderConfirmation"}>
-                <button id="pay">PAY NOW</button>
+                <button id="pay" onClick={handleClearCart}>
+                  PAY NOW
+                </button>
               </Link>
               <button id="cancel">CANCEL</button>
             </div>

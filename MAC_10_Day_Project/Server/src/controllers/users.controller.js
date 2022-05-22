@@ -96,4 +96,25 @@ router.patch("/updateFav/:userId", async (req, res) => {
   }
 });
 
+// router.patch("/purchased", async (req, res) => {
+//   try {
+//     let product = req.body;
+//     console.log("from update", product);
+//     console.log("req.params.userId:", req.params.userId);
+
+//     const user = await User.findById(req.params.id).lean().exec();
+//     console.log("user:", user);
+//     let result = await User.findByIdAndUpdate(req.params.userId, {
+//       $push: { cartItems: product },
+//     })
+//       .lean()
+//       .exec();
+//     console.log("result:", result);
+
+//     res.status(200).send(result);
+//   } catch (e) {
+//     return res.status(500).json({ message: e.message, status: "Failed" });
+//   }
+// });
+
 module.exports = router;

@@ -33,11 +33,14 @@ export const ProductDetails = () => {
     // http://localhost:8081/register/6283c78c7e03a6517f8866a5
 
     if (query == "addtocart") {
-      fetch(`http://localhost:8081/register/updateCart/${userID}`, {
-        method: "PATCH",
-        body: JSON.stringify(cart_product),
-        headers: { "Content-Type": "Application/json" },
-      })
+      fetch(
+        `http://localhost:8081/register/updateCart/6283c78c7e03a6517f8866a5`,
+        {
+          method: "PATCH",
+          body: JSON.stringify(cart_product),
+          headers: { "Content-Type": "Application/json" },
+        },
+      )
         .then((res) => res.json())
         .then((res) => console.log(res))
         .catch((err) => console.log(err));

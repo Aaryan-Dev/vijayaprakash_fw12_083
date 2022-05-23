@@ -26,6 +26,8 @@ export const Signup = () => {
       .then((res) => res.json())
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
+
+    alert("Succesfully Signed Up");
   };
 
   return (
@@ -93,9 +95,11 @@ export const Signup = () => {
             </p>
           </div>
           <div>
-            <button id="create_button" onClick={handleSubmit}>
-              Create My Account
-            </button>
+            <Link to={"/signin"}>
+              <button id="create_button" onClick={handleSubmit}>
+                Create My Account
+              </button>
+            </Link>
             <p className="common_text grey">
               Register at <span style={{ color: "red" }}>Shopp.my</span> and
               receive 10 points.

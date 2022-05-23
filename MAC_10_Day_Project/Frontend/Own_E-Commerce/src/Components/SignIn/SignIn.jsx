@@ -5,6 +5,7 @@ import "./Signin.css";
 import { useDispatch, useSelector } from "react-redux";
 // import { userId } from "../../Redux/Login/action";
 import { login } from "../../Redux/Login/action";
+import { Link } from "react-router-dom";
 
 export const SignIn = () => {
   const [userdetails, setUserdetails] = useState({
@@ -21,6 +22,8 @@ export const SignIn = () => {
 
   const handleSubmit = () => {
     dispatch(login(userdetails));
+
+    alert("Welcome, Signed in");
   };
 
   return (
@@ -54,7 +57,9 @@ export const SignIn = () => {
             <br />
             <br />
             <br />
-            <button onClick={handleSubmit}>Sign in</button>
+            <Link to={"/"}>
+              <button onClick={handleSubmit}>Sign in</button>
+            </Link>
           </div>
         </div>
       </div>

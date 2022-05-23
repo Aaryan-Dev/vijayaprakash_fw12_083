@@ -1,81 +1,63 @@
-#sign_up {
-  border: 1px lightslategrey grey;
-  margin: auto;
+#sign_in {
+  border: 1px solid #cdcecf;
   width: 33%;
-  margin-top: 13vh;
+  margin: auto;
+  margin-top: 5%;
 }
-#logo_img {
-  padding: 1% 27%;
+#sign_in_div {
+  /* border: 1px solid blue; */
+  width: 90%;
+  margin: auto;
 }
-#create_account {
+h2,
+h4 {
+  font-weight: normal;
+  text-align: center;
+}
+.or {
   /* border: 1px solid red; */
   display: flex;
-  flex-direction: column;
-  /* text-align: center; */
-  margin: 2% 12%;
+  flex-direction: row;
+}
+.hiffun {
+  width: 45%;
+  height: 0px;
+  margin: auto;
+}
+#sign_in_form {
+  /* border: 1px solid red; */
+  margin-top: 4%;
 }
 form input {
-  width: 95%;
+  width: 97%;
   height: 6vh;
+  margin-bottom: 1%;
+  border: 1px solid #cdcecf;
 }
-a {
-  color: #4d82b8;
-  text-decoration: none;
-}
-.agree {
-  width: 95%;
-  /* border: 1px solid black; */
-  margin-top: 2.5%;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 10% 90%;
-  margin-left: 1%;
-}
-.agree input {
-  margin-left: 5%;
-}
-.agree .common_text {
+.forgot_Password {
   /* border: 1px solid red; */
-  margin-top: 1.75%;
-}
-#create_button {
-  /* border: 1px solid red; */
-  width: 96%;
-  height: 6vh;
-  background-color: steelblue;
-  border-radius: 15px;
-  color: white;
   margin-top: 5%;
-  text-align: center;
-  padding: 2.5% 0%;
+  font-size: 14px;
+  color: #60646d;
+}
+#signin_button {
+  width: 99%;
+  background-color: #ff9900;
+  height: 7vh;
+  border: none;
+  border-radius: 2%;
+  color: white;
   font-size: 16px;
+  margin-top: 6%;
   cursor: pointer;
 }
-.common_text {
-  font-size: 14px;
+.sign_up_link {
   /* border: 1px solid red; */
-}
-.grey {
-  color: #777777;
-  margin-top: 1%;
-}
-.already {
-  margin: auto;
+  margin-top: 10%;
   text-align: center;
-  margin-top: 5%;
+  font-size: 14px;
+  margin-bottom: 10%;
 }
-#create_account > h2 {
-  text-align: center;
-  font-weight: normal;
+#sign_in_form a {
+  text-decoration: none;
 }
-.already span:hover {
-  text-decoration: underline;
-}
-#create_account input {
-  border-radius: 5px;
-  height: 5vh;
-}
-/* input {
-  border: transparent;
-  outline: none;
-} */

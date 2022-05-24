@@ -37,20 +37,6 @@ export const Signup = () => {
       </div>
 
       <div id="sign_up">
-        <div>
-          <Link to={"/"}>
-            <img
-              src="https://i.pinimg.com/600x315/1e/29/77/1e2977ca1225981e307ad8d2c26a9040.jpg"
-              alt=""
-              id="logo_img"
-              style={{
-                width: "30%",
-                // border: "1px solid red",
-                marginBottom: "-3%",
-              }}
-            />
-          </Link>
-        </div>
         <div id="create_account">
           <h3>Please enter the required details to create an Account</h3>
           <form action="">
@@ -83,15 +69,6 @@ export const Signup = () => {
             <p className="common_text">
               I agree to the <span style={{ color: "red" }}>Shopp.my</span>{" "}
               <a href="#">Terms & Conditions</a> <a href="#">Privacy Policy.</a>
-            </p>
-          </div>
-          <div className="agree" style={{ display: "none" }}>
-            <input type="checkbox" />
-            <p className="common_text">
-              Yes, Sign up our newsletter, get Rs.150 coupons in your first
-              email! You will receive our latest updates, news, and promotions
-              from
-              <span style={{ color: "red" }}>Shopp.my</span>
             </p>
           </div>
           <div>

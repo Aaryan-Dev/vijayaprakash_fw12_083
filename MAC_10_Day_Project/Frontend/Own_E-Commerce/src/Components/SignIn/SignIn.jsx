@@ -83,7 +83,7 @@ export const SignIn = () => {
                   <span style={{ color: "red", fontWeight: 600 }}>
                     Shopp.my?{" "}
                   </span>
-                  <a href="./Sign_Up.html">Create Your Account</a>
+                  <Link to={"/signup"}>Create Your Account</Link>
                 </p>
               </div>
             </div>

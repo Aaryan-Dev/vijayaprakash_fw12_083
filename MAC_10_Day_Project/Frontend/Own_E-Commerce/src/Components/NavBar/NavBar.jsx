@@ -29,7 +29,7 @@ export const NavBar = () => {
                 <LocalMallRoundedIcon />
               </button>
             </Link>
-            <Link to={"#"}>
+            <Link to={"/favourites"}>
               <button className="button-33" role="button">
                 <FavoriteRoundedIcon />
               </button>

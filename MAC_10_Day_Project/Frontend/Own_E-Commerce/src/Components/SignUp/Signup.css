@@ -1,63 +1,64 @@
-#sign_in {
-  border: 1px solid #cdcecf;
+#sign_up {
+  border: 1px solid grey;
+  margin: auto;
+  margin-top: 16vh;
   width: 33%;
-  margin: auto;
-  margin-top: 5%;
 }
-#sign_in_div {
-  /* border: 1px solid blue; */
-  width: 90%;
-  margin: auto;
-}
-h2,
-h4 {
-  font-weight: normal;
-  text-align: center;
-}
-.or {
+#create_account {
   /* border: 1px solid red; */
   display: flex;
-  flex-direction: row;
-}
-.hiffun {
-  width: 45%;
-  height: 0px;
-  margin: auto;
-}
-#sign_in_form {
-  /* border: 1px solid red; */
-  margin-top: 4%;
+  flex-direction: column;
+  /* text-align: center; */
+  margin: 2% 12%;
 }
 form input {
-  width: 97%;
+  width: 95%;
   height: 6vh;
-  margin-bottom: 1%;
-  border: 1px solid #cdcecf;
 }
-.forgot_Password {
+a {
+  color: #4d82b8;
+  text-decoration: none;
+}
+.agree {
+  width: 100%;
   /* border: 1px solid red; */
-  margin-top: 5%;
-  font-size: 14px;
-  color: #60646d;
+  display: flex;
+  margin-top: 2.5%;
 }
-#signin_button {
-  width: 99%;
+.agree .common_text {
+  /* border: 1px solid red; */
+  margin-top: 2.5%;
+}
+input {
+  border-radius: 10px;
+  padding-left: 10px;
+}
+#create_button {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  width: 96%;
+  height: 6vh;
   background-color: #ff9900;
-  height: 7vh;
-  border: none;
-  border-radius: 2%;
   color: white;
+  margin-top: 5%;
+  text-align: center;
+  padding: 2.5% 0%;
   font-size: 16px;
-  margin-top: 6%;
   cursor: pointer;
 }
-.sign_up_link {
-  /* border: 1px solid red; */
-  margin-top: 10%;
-  text-align: center;
+.common_text {
   font-size: 14px;
-  margin-bottom: 10%;
 }
-#sign_in_form a {
-  text-decoration: none;
+.grey {
+  color: #777777;
+  margin-top: 1%;
+}
+.already {
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+#create_account > h2 {
+  text-align: center;
+  font-weight: normal;
 }

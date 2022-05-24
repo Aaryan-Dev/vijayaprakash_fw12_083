@@ -29,7 +29,7 @@ a {
   /* border: 1px solid red; */
   margin-top: 2.5%;
 }
-input {
+.agree input {
   border-radius: 10px;
   padding-left: 10px;
 }

@@ -36,7 +36,10 @@ export const SignIn = () => {
         <div id="sign_in">
           <div id="sign_in_div">
             <div>
-              <h3>Welcome to Shopify</h3>
+              <h3>
+                Welcome to{" "}
+                <span style={{ color: "red", fontWeight: 600 }}>Shopp.my</span>
+              </h3>
               <h2>Sign In</h2>
             </div>
             <div id="sign_in_form">

@@ -1,9 +1,3 @@
-// import React from "react";
-
-// export const OrderConfirmation = () => {
-//   return <div>OrderConfirmation</div>;
-// };
-
 import React, { useEffect, useState } from "react";
 import "./OrderConfirmation.css";
 import { BarLoader, BounceLoader, BeatLoader } from "react-spinners";

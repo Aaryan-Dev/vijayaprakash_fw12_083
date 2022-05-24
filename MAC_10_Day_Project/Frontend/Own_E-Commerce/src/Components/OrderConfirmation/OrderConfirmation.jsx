@@ -7,7 +7,7 @@ import { Footer } from "../Footer/Footer";
 export const OrderConfirmation = () => {
   const [orderStatus, setOrderStatus] = useState(false);
   const [transId, setTransId] = useState(Math.random().toString(36).slice(2));
-  console.log("transId:", transId);
+  // console.log("transId:", transId);
   // console.log("orderStatus:", orderStatus);
 
   useEffect(() => {

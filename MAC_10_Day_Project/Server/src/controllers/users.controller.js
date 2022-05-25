@@ -61,17 +61,18 @@ router.delete("/:id", async (req, res) => {
 router.patch("/updateCart/:userId", async (req, res) => {
   try {
     let product = req.body;
-    console.log("from update", product);
+    // console.log("from update", product);
     console.log("req.params.userId:", req.params.userId);
 
-    const user = await User.findById(req.params.id).lean().exec();
+    // console.log("Hey!");
+    const user = await User.findById(req.params.userId).lean().exec();
     console.log("user:", user);
     let result = await User.findByIdAndUpdate(req.params.userId, {
       $push: { cartItems: product },
     })
       .lean()
       .exec();
-    console.log("result:", result);
+    // console.log("result:", result);
 
     res.status(200).send(result);
   } catch (e) {
